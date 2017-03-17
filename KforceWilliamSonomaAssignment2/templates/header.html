@@ -1,0 +1,23 @@
+<!-- Header Generation uses angualar to dynamically generate the navigation bar.
+Simply editing the data.js file you can add or remove navigation menues -->
+<head>
+	<div id="logoContainer">
+		<img src="../assets/logo.png" alt="WILLIAMS-SONOMA" >
+	</div>
+	<nav class="" id="navBar" ng-app="pageGen" ng-controller='initPage'>
+		<ul class="" id="navList">
+			<li ng-repeat='navPage in navItems' type="none"><a href="#">{{navPage}}</a></li>
+		</ul>
+		<button class="" type="button">
+			<a class="" href="index.html">WILLIAMS SONOMA HOME</a>
+		</button>
+	</nav>
+	<ul class="breadcrumb">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Homekeeping</a></li>
+		<li><a href="#">Apron</a></li>
+		<li><a href="#">Adult Apron</a></li>
+		<li>{{itemTitle}}</li>
+	</ul>
+</head>
+

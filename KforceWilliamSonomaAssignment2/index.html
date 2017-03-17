@@ -1,0 +1,29 @@
+<!-- All code in the project is custom Code no external libraries or stylesheets were used in creating this. As per requirements.
+
+Only library to be imported in is Angular 1.5.7 library -->
+
+<!-- This central index page is used to load all others and to dim the screen when displaying modals. -->
+<!DOCTYPE html>
+<html>
+	<div class="mainContainer">
+		<head>
+			<link rel="stylesheet" type="text/css" href="css/styles.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+			<script type="text/javascript" src="js/data.js"></script>
+			<script type="text/javascript" src="js/createPage.js"></script>
+		</head>
+		<div ng-class='{modalWindow: modalToggle, shrink: !modalToggle}' ng-click='toggleModal()'>
+			<div ng-class="{modalContent : modalToggle}" ng-click='toggleModal()'>
+				<div>
+					<h3>Thank You for shopping. we hope you shop with us again!</h3>
+					<button ng-click='toggleModal()'>OK</button>
+				</div>
+			</div>
+		</div>
+		<body ng-app='pageGen' ng-class='{dimmer : modalToggle}' ng-controller='initPage' ng-init='changeSelection(0)'>
+			<div ng-include='header'></div>
+			<div ng-include='body' id="body"></div>
+			<div id="footer" ng-include='footer'></div>
+		</body>
+	</div>
+</html>

@@ -1,0 +1,120 @@
+@import 'reset';
+
+body{
+	font-family:$navBar-font;
+}
+.column1{
+	width: 60%;
+	float: left;
+}
+.column2{
+	width: 40%;
+	float: left;
+}
+.hidden{
+	display: none;
+	opacity: 0;
+	height: 0;
+	transition: height 3s ease-out;
+}
+.shrink{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+.show{
+	display: table-cell;
+	opacity: 1;
+	height: auto;
+	transition: height 3s ease-in, opacity 1s ease-in;
+}
+#transaction input{
+	text-align: center;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 45px;
+	height: 25px;
+}
+.modalWindow{
+	background-color: white;
+	border: 3px solid #232199;
+	opacity: 1;
+	position: absolute;
+	height: 200px;
+	width: 300px;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	transform: translate(-50%,50%);
+	overflow: hidden;
+	transition: width 1s, height 1s;
+	.modalContent{
+		background-color: white;
+		margin: auto;
+		width: 70%;
+		transform: translate(0,0%);
+		padding: 10px;
+		text-align: center;
+	}
+	button{
+		width: 100px;
+		padding: 5px;
+		margin-top: 20px;
+		transition: width 1s, height 1s;
+	}
+}
+.dimmer{
+	height: 100%;
+	width: 100%;
+	background-color: grey;
+	opacity: 0.5;
+	img, input, #footer footer{
+		filter: brightness(50%);
+	}
+}
+#advDetails{
+	table, td{
+		border-collapse: collapse;
+	}
+	table{
+		border-bottom: 1px solid #DCDDE0;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		width: 100%;
+
+		&:last-child{
+			border-bottom: 1px solid black;
+		}
+	}
+	table img, h2{
+		display: inline;
+	}
+	h2{
+		font-family: $pageHeader-font;
+		font-weight: normal;
+	}
+	p{
+		font-family: $navBar-font;
+		font-weight: lighter;
+		font-size: medium;
+		letter-spacing: 1px;
+		margin-top: 5px;
+	}
+}
+.header{
+	font-family: $pageHeader-font;
+	font-weight: medium;
+}
+#mainImg img{
+	display: inherit;
+	margin: auto;
+}
+#imgSelector{
+	display: table;
+	margin: auto;
+	img{
+		padding: 5px;
+		margin:5px;
+	}
+}

@@ -1,0 +1,62 @@
+<!-- Body Contains most of the information that is accessed throught he Angualr controller -->
+<body ng-app="pageGen" ng-controller='initPage'>
+<!-- First Column Contains the Large image of the product selected
+Along with the smaller thumbnails under it. The thumbnails are dynamically generated so adding another Json Item will not throw off the thumbnail generator. -->
+	<div class="column1">
+		<div id="mainImg">
+			<img ng-src='{{lrgImg}}' alt=""/>
+		</div>
+		<div class="collectionContainer">
+			<div id="imgSelector" class="center">
+				<img ng-src="{{thumbs}}" ng-repeat='thumbs in smlImg' ng-click="changeSelection($index)" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- Second column contails all the details of the selected products, all kept conviently in seperate variables so that it is easier to see where different details are.
+	Modal Button generates a simple Modal window that thanks user for purchase -->
+	<div class="column2">
+			<h2 class="header">{{itemTitle}}</h2>
+			<span>{{itemDescription}}</span>
+			<ul>
+				<li ng-repeat="bullets in bulletList">
+					{{bullets}}
+				</li>
+			</ul>
+			<table id="transaction">
+				<tr>
+					<td>
+						<span>{{itemPrice}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id='qty' type="number" step="1" placeholder="QTY" min="0">			
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="../assets/button-add-to-cart.png" alt="Add to Cart" ng-click='toggleModal()'>
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<!-- This is where the collapsable headers are created which are also generated dynamically so simply need to be added to the data.js file. -->
+			<div id="advDetails">
+				<table ng-repeat="det in itemExDetail" ng-click="collapse()">
+					<tr>
+						<td><img ng-src='{{imgExp}}'></td>
+						<td>
+							<h2>{{det['header']}}</h2>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"  ng-class="{hidden: !showSection, show: showSection}">
+							<p  ng-class="{hidden: !showSection, show: showSection}">
+								{{det['content']}}
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+	</div>
+</body>

@@ -1,0 +1,197 @@
+.mainContainer {
+  width: 80%;
+  margin: auto; }
+
+#footer {
+  display: block;
+  clear: both; }
+  #footer footer {
+    border-top: 1px solid black;
+    background-color: #EEEEEE;
+    padding: 20px;
+    text-align: center;
+    z-index: 0; }
+
+#logoContainer {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  #logoContainer img {
+    margin: auto;
+    display: block; }
+
+nav {
+  max-width: 100%;
+  background-color: #212121;
+  overflow: hidden;
+  display: block;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  text-align: center;
+  height: 40px; }
+  nav li:active {
+    background-color: #E5E5E5; }
+    nav li:active a {
+      color: #000; }
+  nav li, nav button {
+    background-color: #1E2846;
+    border: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 7px;
+    padding-left: 7px; }
+    nav li:hover, nav button:hover {
+      background-color: #E5E5E5; }
+      nav li:hover a, nav button:hover a {
+        color: #000; }
+    nav li a, nav button a {
+      font-size: 11px;
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: white; }
+      nav li a:hover, nav button a:hover {
+        color: #000; }
+  nav ul {
+    float: left;
+    padding-left: 0;
+    margin: 0; }
+    nav ul li {
+      float: left;
+      background-color: #212121; }
+  nav button {
+    float: right;
+    border-left: 1px solid white; }
+
+.breadcrumb {
+  list-style: none;
+  font-size: 11px;
+  height: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8A8A8A; }
+  .breadcrumb li {
+    display: inline; }
+    .breadcrumb li a {
+      color: #8A8A8A;
+      text-decoration: none; }
+      .breadcrumb li a:hover {
+        color: #8A8A8A;
+        text-decoration: underline; }
+    .breadcrumb li + li:before {
+      padding: 4px;
+      color: #8A8A8A;
+      content: ">"; }
+    .breadcrumb li:last-child {
+      color: black; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif; }
+
+.column1 {
+  width: 60%;
+  float: left; }
+
+.column2 {
+  width: 40%;
+  float: left; }
+
+.hidden {
+  display: none;
+  opacity: 0;
+  height: 0;
+  transition: height 3s ease-out; }
+
+.shrink {
+  height: 0;
+  width: 0;
+  visibility: hidden; }
+
+.show {
+  display: table-cell;
+  opacity: 1;
+  height: auto;
+  transition: height 3s ease-in, opacity 1s ease-in; }
+
+#transaction input {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 45px;
+  height: 25px; }
+
+.modalWindow {
+  background-color: white;
+  border: 3px solid #232199;
+  opacity: 1;
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+  transition: width 1s, height 1s; }
+  .modalWindow .modalContent {
+    background-color: white;
+    margin: auto;
+    width: 70%;
+    transform: translate(0, 0%);
+    padding: 10px;
+    text-align: center; }
+  .modalWindow button {
+    width: 100px;
+    padding: 5px;
+    margin-top: 20px;
+    transition: width 1s, height 1s; }
+
+.dimmer {
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+  opacity: 0.5; }
+  .dimmer img, .dimmer input, .dimmer #footer footer {
+    filter: brightness(50%); }
+
+#advDetails table, #advDetails td {
+  border-collapse: collapse; }
+#advDetails table {
+  border-bottom: 1px solid #DCDDE0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  width: 100%; }
+  #advDetails table:last-child {
+    border-bottom: 1px solid black; }
+#advDetails table img, #advDetails h2 {
+  display: inline; }
+#advDetails h2 {
+  font-family: Times;
+  font-weight: normal; }
+#advDetails p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: medium;
+  letter-spacing: 1px;
+  margin-top: 5px; }
+
+.header {
+  font-family: Times;
+  font-weight: medium; }
+
+#mainImg img {
+  display: inherit;
+  margin: auto; }
+
+#imgSelector {
+  display: table;
+  margin: auto; }
+  #imgSelector img {
+    padding: 5px;
+    margin: 5px; }
+
+/*# sourceMappingURL=styles.css.map */
